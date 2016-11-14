@@ -1,2 +1,2 @@
 # Projects
-####Repositiry contains multiple projects
+####repository contains multiple projects
