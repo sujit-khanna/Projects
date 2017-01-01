@@ -1,4 +1,6 @@
 1. DeepLearning_Strategy.py file contains code for return class prediction on a rolling basis using one hot encoding, which uses High-Frequency Orderbook features over a period of 40 days, with Training Testing split as 80:20
+
 2. DeepLearningMINMAX.py file contains code that uses LSTM RNN for Financial Price series prediction.The algorithm does not perform training on a rolling basis unlike DeepLearning_STrategy.py
+
 3. DeepLearningOneHotEncode.py file contains code that uses LSTM RNN for price return class prediction using one hot encoding.The algorithm does not perform training on a rolling basis unlike DeepLearning_STrategy.py
    
