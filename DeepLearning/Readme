@@ -4,3 +4,4 @@
 
 3. DeepLearningOneHotEncode.py file contains code that uses LSTM RNN for price return class prediction using one hot encoding.The algorithm does not perform training on a rolling basis unlike DeepLearning_STrategy.py
    
+4. Refer file "LSTM_Presentation_Final.pdf" for sample Strategy Implementation details
