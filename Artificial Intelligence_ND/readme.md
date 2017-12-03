@@ -5,3 +5,5 @@ Project1: Develop a Sudoku Playing Agent
 Project2: Develop an Isolation Playing Agent
 
 Project3: Develop a project to solve Planning Search Problems
+
+Project4: Develop Hand Sign Recognizer using Hidden Markov Models
