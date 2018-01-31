@@ -1,1 +1,0 @@
-Adding the project details
