@@ -1,0 +1,26 @@
+##Bio-Inspired Systems: Final Project Proposal -Sujit Khanna and paritosh Borkar<br/>
+###*Abstract*<br/>
+This project aims to solve a reinforcement learning environment; using a multi-agent system.The environment of choice is Tennis Game Playing from Unity ML-Agents.<br/>
+In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1.  
+If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01.  
+**Thus, the goal of each agent is to keep the ball in play.**
+
+<img src="https://user-images.githubusercontent.com/10624937/42135623-e770e354-7d12-11e8-998d-29fc74429ca2.gif">
+
+
+The task is episodic, and in order to solve the environment, **the agents must get an average score of +0.5 (over 100 consecutive episodes, 
+after taking the maximum over both agents)**
+
+
+Here the idea is to train a pair of agents to play a game of tennis via self-play. Generally this environment is solved (i.e training agents) 
+via some form of multi-agent Deep Reinforcement Learning algorithm such as MADDPG. MADDPG also known as Multi-Agent Deep Deterministic Policy Gradient 
+which uses policy gradient techniques to train agents, however the multi-agent framework with MADDPG allows different agents to learn by 
+communicating, co-operating and competing with each other. Such communication takes place via sharing of parameters between agents, 
+as such this learning is not directed towards a particular objective. The all agents have access to every other agents learning parameters,
+however it doesn’t use  any fitness function to decides, how the communication between the agents must be directed.
+
+
+In this project we aim to augment MADDPG with communication techniques inspired from bio-logical systems to solve the Tennis Game Environment. 
+We believe using techniques like ” Attraction Intensity” from the firefly algorithm to direct communication between agents can help speed up 
+the training process, and lead to better convergence. The aim of this project is to explore these techniques and compare them against the baseline 
+implementation of MADDPG algorithm
