@@ -1,6 +1,6 @@
 # Bio-Inspired Systems: Final Project Proposal -Sujit Khanna and paritosh Borkar<br/>
 ## *Abstract*<br/>
-This project aims to solve a reinforcement learning environment; using a multi-agent system.The environment of choice is Tennis Game Playing from Unity ML-Agents.In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1.If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. **Thus, the goal of each agent is to keep the ball in play.**
+This project aims to solve a game playing environment environment; using a Multi-Agent Deep Reinforcement Learning algorithm agumented with inter-agent communication techniques inspired by bio-logical systems. The game playing environment of choice is *Tennis* from Unity ML-Agents toolkit.In this environment, two agents control rackets to bounce a ball over a net. If an agent hits the ball over the net, it receives a reward of +0.1.If an agent lets a ball hit the ground or hits the ball out of bounds, it receives a reward of -0.01. **Thus, the goal of each agent is to keep the ball in play.**
 
 <img src="https://user-images.githubusercontent.com/10624937/42135623-e770e354-7d12-11e8-998d-29fc74429ca2.gif">
 
