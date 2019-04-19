@@ -35,8 +35,7 @@ class Actor(nn.Module):
 
     def forward(self, state):
         '''
-        This function builds up the actor network
-        :return:
+        This generates Actor Network
         '''
         if state.dim()==1:
             state = torch.unsqueeze(state, 0) #reshaaping the state to comply with batch norm
@@ -71,7 +70,7 @@ class Critic(nn.Module):
         self.fc3.weight.data.uniform_(-(3e-3), 3e-3)
 
     def forward(self, state, action):
-        """Build a critic (value) network that maps (state, action) pairs -> Q-values."""
+        """This creates Critic Netowrk for MADDPG"""
 
         # Reshape the state to comply with Batch Normalization
         if state.dim() == 1:
