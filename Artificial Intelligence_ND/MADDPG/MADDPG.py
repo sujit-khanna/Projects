@@ -17,15 +17,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 class MADDPG:
 
     def __init__(self, state_size, action_size, num_agents, random_seed):
-        """Initialize a MADDPG Agent object.
 
-        Params
-        ======
-            state_size (int): dimension of each state
-            action_size (int): dimension of each action
-            num_agents (int): number of agents
-            random_seed (int): random seed
-        """
 
         super(MADDPG, self).__init__()
 
@@ -43,7 +35,6 @@ class MADDPG:
         self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, random_seed)
 
     def reset(self):
-        '''reset all the agents'''
         for agent in self.agents:
             agent.reset()
 
@@ -52,7 +43,7 @@ class MADDPG:
 
     def step(self, states, actions, rewards, next_states, dones,num_current_episode):
 
-        ''' save experiences in replay memory and use them to learn'''
+        '''experience replay to save experiences in replay memory and use them to learn'''
         self.memory.add(encode(states), encode(actions), rewards, encode(next_states), dones)
 
 
@@ -69,22 +60,6 @@ class MADDPG:
                 self.maddpg_learn(experiences, own_idx=1, other_idx=0)
 
     def maddpg_learn(self, experiences, own_idx, other_idx, gamma=GAMMA):
-        """
-        Update the policy of the MADDPG "own" agent. The actors have only access to agent own
-        information, whereas the critics have access to all agents information.
-
-        Update policy and value parameters using given batch of experience tuples.
-        Q_targets = r + γ * critic_target(next_state, actor_target(next_state))
-        where:
-            actor_target(states) -> action
-            critic_target(all_states, all_actions) -> Q-value
-        Params
-        ======
-            experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples
-            own_idx (int) : index of the own agent to update in self.agents
-            other_idx (int) : index of the other agent to update in self.agents
-            gamma (float): discount factor
-        """
 
         states, actions, rewards, next_states, dones = experiences
 
@@ -146,9 +121,6 @@ class MADDPG:
 
     def maddpg_learn_old(self, experiences, own_idx, other_idx, gamma=GAMMA):
         '''Only works for 2 agents systems; modify it for any number of agents'''
-
-
-
         states, actions, rewards, next_states, dones = experiences
 
         ##filtering out own states
