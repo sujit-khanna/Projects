@@ -46,6 +46,4 @@ The observation space consists of 8 variables corresponding to the position and 
 - Optional Imitation Learning scene: TennisIL.
 
 
-### Solving the Environment
 
-In this Udacity project, the environment is considered solved, when the average (over 100 episodes) of those **scores is at least +0.5.**
